@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CUSTOM_MESSAGE=" Hello"
+
+cat <<EOF | sudo tee /etc/update-motd.d/mycustomfile > /dev/null
+#!/bin/sh
+echo "$CUSTOM_MESSAGE"
+EOF
+
+sudo chmod +x /etc/update-motd.d/mycustomfile

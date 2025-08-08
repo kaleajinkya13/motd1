@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CUSTOM_MESSAGE=" Hello"
+CUSTOM_MESSAGE=" Hello..."
 
 cat <<EOF | sudo tee /etc/update-motd.d/mycustomfile > /dev/null
 #!/bin/sh
